@@ -1,13 +1,14 @@
 function creaContatoreAutomatico(intervallo) {
     let contatore = 0;
-    return setInterval(() => {
+
+    const intervalloId = setInterval(() => {
         contatore++;
         return console.log(contatore);
     }, intervallo);
+
+    setTimeout(() => {
+        clearInterval(intervalloId);
+    }, 5000);
 }
 
-const intervalloId = creaContatoreAutomatico(1000);
-
-setTimeout(() => {
-    clearInterval(intervalloId);
-}, 5000);
+creaContatoreAutomatico(1000);
