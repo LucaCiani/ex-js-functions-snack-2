@@ -1,7 +1,5 @@
-let contatore = 10;
-
-function eseguiEferma(messaggio, intervallo, durata) {
-    console.log(messaggio);
+function eseguiEferma(messaggio, contatore, intervallo, durata) {
+    console.log(`${messaggio} ${contatore}`);
 
     const intervalloId = setInterval(() => {
         contatore--;
@@ -14,4 +12,4 @@ function eseguiEferma(messaggio, intervallo, durata) {
     }, durata);
 }
 
-eseguiEferma(`Inizio a contare da ${contatore}`, 1000, 9999);
+eseguiEferma(`Inizio a contare:`, 10, 1000, 9999);
