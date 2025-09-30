@@ -1,12 +1,11 @@
 function stampaOgniSecondo(messaggio, intervallo) {
-    return setInterval(() => {
+    const intervalloId = setInterval(() => {
         return console.log(messaggio);
-        
-    }, intervallo)
-};
+    }, intervallo);
 
-const intervalloId = stampaOgniSecondo("Ciao mamma sono su Boolean!", 1000);
+    setTimeout(() => {
+        clearInterval(intervalloId);
+    }, 3000);
+}
 
-setTimeout(() => {
-    clearInterval(intervalloId);
-}, 3000);
+stampaOgniSecondo("Ciao mamma sono su Boolean!", 1000);
